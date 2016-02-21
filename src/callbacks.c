@@ -92,7 +92,7 @@ bt_con_decon_clicked_cb( GtkButton *button,
   		}else{
 			gtk_button_set_label (GTK_BUTTON(button),  "Disconnect");
 			gtk_image_set_from_file (GTK_IMAGE(image_connect),
-									  "../img/img10.png");
+									  "../glade/img10.png");
 			gtk_switch_set_active (GTK_SWITCH(switch1), FALSE);
 			gtk_widget_set_sensitive (GTK_WIDGET(switch1), TRUE);
 			g_print("Connect\n");
@@ -103,7 +103,7 @@ bt_con_decon_clicked_cb( GtkButton *button,
 		RS232_CloseComport(com_device[device]);
 		gtk_button_set_label (GTK_BUTTON(button),  "Connect...");
 		gtk_image_set_from_file (GTK_IMAGE(image_connect),
-								  "../img/img1.png");
+								  "../glade/img1.png");
 		gtk_widget_set_sensitive (GTK_WIDGET(switch1), FALSE);
 		g_print("Disconnect\n");
 		connect = FALSE;
